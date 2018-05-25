@@ -1,11 +1,9 @@
 {
     "name": "botnyx/tm_encryption",
-    "autoload": {
-        "psr-4" : {
-            "botnyx\\tm_encryption\\" : "src/"
-        }
-    },
     "require": {
         "php": ">=7.0"
+    },
+	"autoload": {
+        "psr-4": {"botnyx\\tm_encryption\\" : "src"}
     }
 }
