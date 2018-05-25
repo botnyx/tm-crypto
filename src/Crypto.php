@@ -1,5 +1,5 @@
 <?php 
-
+die("================");
 namespace botnyx\tm_encryption;
 /*
 
