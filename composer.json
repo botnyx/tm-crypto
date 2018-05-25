@@ -2,7 +2,7 @@
     "name": "botnyx/tm_encryption",
     "autoload": {
         "psr-4" : {
-            "botnyx\\tm_encryption": "src"
+            "botnyx\\tm_encryption\\" : "src/"
         }
     },
     "require": {
