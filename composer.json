@@ -4,5 +4,8 @@
         "psr-0" : {
             "botnyx\\tm_encryption" : "src"
         }
+    },
+    "require": {
+        "php": ">=7.0"
     }
 }
