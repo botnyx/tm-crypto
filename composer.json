@@ -1,9 +1,10 @@
 {
     "name": "botnyx/tm_encryption",
+	"minimum-stability": "dev",
     "require": {
         "php": ">=7.0"
     },
 	"autoload": {
-        "classmap": ["src/Crypto.php"]
-    }
+        "psr-4": "src"
+    }	
 }
