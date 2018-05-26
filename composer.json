@@ -6,6 +6,6 @@
         "php": ">=7.0"
     },
 	"autoload": {
-        "psr-4": { "botnyx\\tmencryption\\": "src" }
+        "psr-4": { "botnyx\\tmcrypto\\": "src" }
     }	
 }
