@@ -1,8 +1,6 @@
 <?php 
 
-namespace botnyx\tm_encryption;
-
-dsds
+namespace botnyx\tmencryption;
 
 class decryption {
 	
