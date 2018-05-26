@@ -1,11 +1,11 @@
 {
-    "name": "botnyx/tm_encryption",
+    "name": "botnyx/tmencryption",
 	"minimum-stability": "dev",
 	"type":"library",
     "require": {
         "php": ">=7.0"
     },
 	"autoload": {
-        "psr-4": { "\\botnyx\\tm_encryption": "src/" }
+        "psr-4": { "botnyx\\tmencryption\\": "src/" }
     }	
 }

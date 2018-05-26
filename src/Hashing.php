@@ -1,6 +1,6 @@
 <?php 
 
-namespace botnyx\tm_encryption;
+namespace botnyx\tmencryption;
 
 
 class hashing {

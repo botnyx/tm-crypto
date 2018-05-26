@@ -1,6 +1,7 @@
 <?php 
-die("================");
-namespace botnyx\tm_encryption;
+
+namespace botnyx\tmencryption;
+
 /*
 
 	$c= new crypto();
