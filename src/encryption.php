@@ -1,6 +1,6 @@
 <?php 
 
-namespace botnyx\crypto;
+namespace botnyx\tmcrypto;
 
 
 class encryption {

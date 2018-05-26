@@ -1,6 +1,6 @@
 <?php 
 
-namespace botnyx\crypto;
+namespace botnyx\tmcrypto;
 
 /*
 
@@ -105,9 +105,9 @@ class crypto {
 		$this->cryptokeys = $this->readConfig($hostname);
 		
 		
-		$this->e = new \botnyx\crypto\encryption();
-		$this->d = new \botnyx\crypto\decryption();
-		$this->h = new \botnyx\crypto\hashing();
+		$this->e = new \botnyx\tmcrypto\encryption();
+		$this->d = new \botnyx\tmcrypto\decryption();
+		$this->h = new \botnyx\tmcrypto\hashing();
 	}
 	
 	function readConfig($section){
