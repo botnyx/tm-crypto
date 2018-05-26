@@ -92,17 +92,11 @@ namespace botnyx\tmcrypto;
 
 class crypto {
 	
-	function __construct($hostname){
-		// $keys=false
+	function __construct($hostname="localhost"){
 		/* encryption/decryption keys */
-		//if(!$keys){ 
-		//	$this->keys = $this->EncryptionKeys(); 
-		//}elseif(!is_array($keys)){
-		//	throw new \Exception('No Encryption keys found.');
-		//}
-		#die();
 		
 		$this->cryptokeys = $this->readConfig($hostname);
+		
 		
 		
 		$this->e = new \botnyx\tmcrypto\encryption();
@@ -126,7 +120,12 @@ class crypto {
 					error_log("please check the Crypto settings.json");
 					die("there is a problem with the security settings.");
 			}
-			return $cs[$section];
+			if (array_key_exists($section,$cs)){
+				return $cs[$section];
+			}else{
+				throw new \Exception('No Encryption keys found.');
+			}
+			
 			
 			
 		}else{
