@@ -1,6 +1,6 @@
 <?php 
 
-namespace botnyx\tmencryption;
+namespace botnyx\crypto;
 
 /*
 
@@ -92,7 +92,7 @@ namespace botnyx\tmencryption;
 
 class crypto {
 	
-	function __construct(){
+	function __construct($hostname){
 		// $keys=false
 		/* encryption/decryption keys */
 		//if(!$keys){ 
@@ -102,16 +102,16 @@ class crypto {
 		//}
 		#die();
 		
-		$this->cryptokeys = $this->readConfig();
+		$this->cryptokeys = $this->readConfig($hostname);
 		
 		
-		$this->e = new \botnyx\tm_encryption\encryption();
-		$this->d = new \botnyx\tm_encryption\decryption();
-		$this->h = new \botnyx\tm_encryption\hashing();
+		$this->e = new \botnyx\crypto\encryption();
+		$this->d = new \botnyx\crypto\decryption();
+		$this->h = new \botnyx\crypto\hashing();
 	}
 	
-	function readConfig(){
-		$sf = __DIR__."/../settings.json";
+	function readConfig($section){
+		$sf = __DIR__."/../../../../src/crypto.json";
 		if(file_exists($sf)){
 			$handle = fopen($sf, "r");
 			$contents = fread($handle, filesize($sf));
@@ -126,13 +126,13 @@ class crypto {
 					error_log("please check the Crypto settings.json");
 					die("there is a problem with the security settings.");
 			}
-			return $cs;
+			return $cs[$section];
 			
 			
 		}else{
 			error_log("Cryptographic settings missing!");
 			error_log("please check the Crypto settings.json");
-			die("this system does have the correct security settings.");
+			die("this system does have the correct security settings..");
 		}
 		
 	}
