@@ -78,7 +78,7 @@ class hashing {
 		}
 		
 		
-		error_log(__DIR__);
+		//error_log(__DIR__);
 	}
 	
 	
