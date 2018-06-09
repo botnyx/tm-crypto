@@ -1,6 +1,5 @@
 {
     "name": "botnyx/tm-crypto",
-	"minimum-stability": "dev",
 	"type":"library",
     "require": {
         "php": ">=7.0"
