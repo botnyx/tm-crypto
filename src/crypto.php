@@ -95,6 +95,10 @@ class crypto {
 	function __construct($hostname="localhost"){
 		/* encryption/decryption keys */
 		
+		
+		#print_r($__appcfg['APPDIR']);
+		
+		#die();
 		$this->cryptokeys = $this->readConfig($hostname);
 		
 		
@@ -105,7 +109,8 @@ class crypto {
 	}
 	
 	function readConfig($section){
-		$sf = __DIR__."/../../../../src/crypto.json";
+		global $__appcfg;
+		$sf = $__appcfg['APPDIR']."/crypto.json";
 		if(file_exists($sf)){
 			$handle = fopen($sf, "r");
 			$contents = fread($handle, filesize($sf));
