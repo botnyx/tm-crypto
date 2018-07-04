@@ -136,6 +136,7 @@ class crypto {
 		}else{
 			error_log("Cryptographic settings missing!");
 			error_log("please check the Crypto settings.json");
+			error_log($sf);
 			die("this system does have the correct security settings..");
 		}
 		
